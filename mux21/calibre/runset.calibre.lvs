@@ -1,0 +1,17 @@
+*lvsRulesFile: /classes/ecen4303F17/calibre/calibreLVS_scn3me_subm.rul
+*lvsRunDir: .
+*lvsLayoutPaths: ../magic/mux21.gds
+*lvsLayoutPrimary: mux21
+*lvsSourcePath: ../sue/mux21.sp
+*lvsSourcePrimary: mux21
+*lvsSourceSystem: SPICE
+*lvsSpiceFile: extracted.sp
+*lvsPowerNames: vdd 
+*lvsGroundNames: gnd
+*lvsIgnorePorts: 1
+*lvsERCDatabase: mux21.erc.db
+*lvsERCSummaryFile: mux21.erc.summary
+*lvsReportFile: mux21.lvs.report
+*lvsMaskDBFile: mux21.maskdb
+*cmnFDILayerMapFile: /classes/ecen4303F17/calibre/layer.map
+*cmnFDIUseLayerMap: 1

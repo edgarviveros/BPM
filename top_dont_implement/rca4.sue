@@ -1,0 +1,61 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_rca4 {} {
+  make FA -origin {350 410}
+  make FA -origin {670 410}
+  make FA -origin {1010 410}
+  make FA -origin {1360 410}
+  make input -name {A[3:0]} -origin {230 300}
+  make input -name {B[3:0]} -origin {230 320}
+  make name_net_s -name {A[0]} -origin {220 390}
+  make name_net_s -name {B[0]} -origin {220 410}
+  make name_net_s -name {S[1]} -origin {810 400}
+  make name_net_s -name {S[0]} -origin {480 400}
+  make name_net_s -name {S[3]} -origin {1500 400}
+  make name_net_s -name {A[1]} -origin {540 390}
+  make name_net_s -name {B[1]} -origin {540 410}
+  make name_net_s -name {A[2]} -origin {880 390}
+  make name_net_s -name {B[2]} -origin {880 410}
+  make name_net_s -name {S[2]} -origin {1150 400}
+  make name_net_s -name {A[3]} -origin {1230 390}
+  make name_net_s -name {B[3]} -origin {1230 410}
+  make output -name {S[3:0]} -origin {230 280}
+  make global -name gnd -origin {220 430}
+  make name_net_s -name cout -origin {1500 430}
+  make output -name cout -origin {230 260}
+  make_wire 1150 400 1110 400
+  make_wire 1500 400 1460 400
+  make_wire 1110 430 1260 430
+  make_wire 1500 430 1460 430
+  make_wire 770 430 910 430
+  make_wire 770 400 810 400
+  make_wire 450 430 570 430
+  make_wire 480 400 450 400
+  make_wire 540 390 570 390
+  make_wire 540 410 570 410
+  make_wire 880 390 910 390
+  make_wire 880 410 910 410
+  make_wire 1230 390 1260 390
+  make_wire 1230 410 1260 410
+  make_wire 220 390 250 390
+  make_wire 220 410 250 410
+  make_wire 220 430 250 430
+}
+
+proc ICON_rca4 args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name {}} {M {}} {dpc {}}}
+  icon_term -type input -origin {-110 -40} -name {A[3:0]}
+  icon_term -type input -origin {-110 0} -name {B[3:0]}
+  icon_term -type output -origin {110 -40} -name cout
+  icon_term -type output -origin {110 0} -name {S[3:0]}
+  icon_property -origin {0 40} -size large -anchor center -label rca4
+  icon_line -110 -60 110 -60 110 60 -110 60 -110 -60
+  icon_property -origin {-100 -40} -label {A[3:0]}
+  icon_property -origin {-100 0} -label {B[3:0]}
+  icon_property -origin {100 -40} -anchor e -label cout
+  icon_property -origin {100 0} -anchor e -label {S[3:0]}
+  icon_property -origin {-110 280} -type user -name name
+  icon_property -origin {-110 300} -type user -name M
+  icon_property -origin {-110 320} -type user -name dpc
+}
+

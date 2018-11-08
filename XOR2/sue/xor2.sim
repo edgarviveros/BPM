@@ -1,0 +1,28 @@
+| units: 30.0  tech: scmos  format: MIT
+A a input
+A b input
+A out output
+| device pmos -150 210
+p b vdd net_4 1 12
+| device pmos_1 -150 290
+p net_1 net_4 out 1 12
+| device pmos_2 -320 290
+p a net_6 out 1 12
+| device pmos_3 -320 210
+p net_3 vdd net_6 1 12
+| device nmos -150 450
+n b gnd net_2 1 6
+| device nmos_1 -320 450
+n net_3 gnd net_5 1 6
+| device nmos_2 -150 370
+n a net_2 out 1 6
+| device nmos_3 -320 370
+n net_1 net_5 out 1 6
+| device pmos_4 -580 210
+p a vdd net_1 1 12
+| device nmos_4 -580 430
+n a gnd net_1 1 6
+| device pmos_5 80 210
+p b vdd net_3 1 12
+| device nmos_5 80 430
+n b gnd net_3 1 6

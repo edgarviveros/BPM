@@ -1,0 +1,93 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_bit1b {} {
+  make mux21 -origin {290 350}
+  make dffpos -origin {300 760}
+  make inv -origin {10 470}
+  make output -name Out -origin {460 680}
+  make input -name Init -origin {-50 470}
+  make global -orient RXY -name gnd -origin {-50 260}
+  make mux21 -origin {300 630}
+  make inv -origin {50 610}
+  make input -name muxB_in -origin {100 570}
+  make input -name muxA_in -origin {100 550}
+  make mux21 -origin {300 490}
+  make input -name mcand -origin {90 290}
+  make input -name mplier -origin {60 430}
+  make input -name reg_in -origin {60 410}
+  make input -name en -origin {-60 720}
+  make and -origin {30 720}
+  make input -name clk -origin {-60 680}
+  make output -name muxB_out -origin {440 410}
+  make output -name muxA_out -origin {430 270}
+  make inv -origin {10 330}
+  make input -name q0 -origin {-20 310}
+  make_wire 390 270 430 270
+  make_wire 150 710 200 710
+  make_wire 400 550 430 550
+  make_wire 430 550 430 640
+  make_wire 430 640 150 640
+  make_wire 150 640 150 710
+  make_wire 200 610 150 610
+  make_wire -20 610 30 610
+  make_wire -20 590 200 590
+  make_wire -20 590 -20 610
+  make_wire 100 570 200 570
+  make_wire 100 550 200 550
+  make_wire -50 470 -20 470
+  make_wire -20 470 -20 590
+  make_wire -20 470 -10 470
+  make_wire 200 470 110 470
+  make_wire -20 470 -20 450
+  make_wire -20 450 200 450
+  make_wire 90 290 190 290
+  make_wire -50 270 190 270
+  make_wire -50 270 -50 260
+  make_wire 60 430 200 430
+  make_wire 60 410 200 410
+  make_wire -60 680 -30 680
+  make_wire -60 720 -30 720
+  make_wire 90 720 120 720
+  make_wire 120 720 120 680
+  make_wire 120 680 200 680
+  make_wire 400 410 440 410
+  make_wire 400 680 460 680
+  make_wire 110 330 190 330
+  make_wire -20 310 -20 330
+  make_wire -20 330 -10 330
+  make_wire -20 310 190 310
+}
+
+proc ICON_bit1b args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name {}} {M {}} {dpc {}}}
+  icon_term -type input -origin {-130 -160} -name mcand
+  icon_term -type input -origin {-130 -120} -name reg_in
+  icon_term -type input -origin {-130 -80} -name mplier
+  icon_term -type input -origin {-130 -40} -name Init
+  icon_term -type input -origin {-130 0} -name muxA_in
+  icon_term -type input -origin {-130 40} -name muxB_in
+  icon_term -type input -origin {-130 80} -name clk
+  icon_term -type input -origin {-130 120} -name en
+  icon_term -type output -origin {130 40} -name Out
+  icon_term -type output -origin {130 0} -name muxB_out
+  icon_term -type output -origin {130 -40} -name muxA_out
+  icon_term -type input -origin {-130 160} -name q0
+  icon_property -origin {0 -120} -size large -anchor center -label bit1b
+  icon_line -130 -180 130 -180 130 180 -130 180 -130 -180
+  icon_property -origin {-120 -160} -label mcand
+  icon_property -origin {-120 -120} -label reg_in
+  icon_property -origin {-120 -80} -label mplier
+  icon_property -origin {-120 -40} -label Init
+  icon_property -origin {-120 0} -label muxA_in
+  icon_property -origin {-120 40} -label muxB_in
+  icon_property -origin {-120 80} -label clk
+  icon_property -origin {-120 120} -label en
+  icon_property -origin {120 -40} -anchor e -label muxA_out
+  icon_property -origin {120 0} -anchor e -label muxB_out
+  icon_property -origin {120 40} -anchor e -label Out
+  icon_property -origin {-130 400} -type user -name name
+  icon_property -origin {-130 420} -type user -name M
+  icon_property -origin {-130 440} -type user -name dpc
+  icon_property -origin {-120 160} -label q0
+}
+

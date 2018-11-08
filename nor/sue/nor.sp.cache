@@ -1,0 +1,9 @@
+set NETLIST_CACHE(nor,cells) {{icon nmos /programs/micromagic/mmi/sue/schematics/mspice/nmos.sue {}} {icon pmos /programs/micromagic/mmi/sue/schematics/mspice/pmos.sue {}}}
+set netlist_props spice
+set netlist_level 1000
+set NETLIST_CACHE(nor,globals) {vdd gnd}
+set NETLIST_EXPLICIT_GLOBALS {}
+set NETLIST_CACHE(nor,version) MMI_SUE5.6.29
+set NETLIST_CACHE(nor) {{.SUBCKT nor A B Y } {M_1 Y A gnd gnd n W='3*1u' L='0.6*1u' } {M_2 Y B gnd gnd n W='3*1u' L='0.6*1u' } {M_3 Y A net_1 vdd p W='12*1u' L='0.6*1u' } {M_4 net_1 B vdd vdd p W='12*1u' L='0.6*1u' } {.ENDS	$ nor} {}}
+set NETLIST_CACHE(nor,names) {{380 500 {1 B} {2 B}} {590 460 {0 Y}} {590 380 {0 M_3}} {440 540 {1 gnd} {2 gnd}} {440 460 {0 Y}} {530 290 {1 B} {2 B}} {590 330 {0 net_1}} {590 250 {0 vdd}} {530 500 {1 A} {2 A}} {690 430 {1 Y}} {590 290 {0 M_4}} {590 500 {0 M_1}} {530 380 {1 A} {2 A}} {590 240 {1 vdd}} {590 420 {0 Y}} {440 500 {0 M_2}} {590 340 {0 net_1}} {590 540 {1 gnd} {2 gnd}}}
+set NETLIST_CACHE(nor,wires) {{590 330 590 340 net_1} {440 430 440 460 Y} {590 420 590 430 Y} {590 430 590 460 Y} {440 430 590 430 Y} {590 240 590 250 vdd} {590 430 690 430 Y}}

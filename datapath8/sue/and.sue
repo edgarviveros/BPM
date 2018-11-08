@@ -1,0 +1,25 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_and {} {
+  make nand -origin {380 300}
+  make inv -origin {460 290}
+  make output -name Z -origin {560 290}
+  make input -name A -origin {330 290}
+  make input -name B -origin {330 310}
+}
+
+proc ICON_and args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name {}} {M {}} {dpc {}}}
+  icon_term -type input -origin {-60 -40} -name A
+  icon_term -type input -origin {-60 0} -name B
+  icon_term -type output -origin {60 0} -name Z
+  icon_property -origin {0 0} -size large -anchor center -label and
+  icon_line -60 -60 60 -60 60 60 -60 60 -60 -60
+  icon_property -origin {-50 -40} -label A
+  icon_property -origin {-50 0} -label B
+  icon_property -origin {50 0} -anchor e -label Z
+  icon_property -origin {-60 280} -type user -name name
+  icon_property -origin {-60 300} -type user -name M
+  icon_property -origin {-60 320} -type user -name dpc
+}
+

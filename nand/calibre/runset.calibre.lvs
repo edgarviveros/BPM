@@ -1,0 +1,17 @@
+*lvsRulesFile: /classes/ecen4303F17/calibre/calibreLVS_scn3me_subm.rul
+*lvsRunDir: .
+*lvsLayoutPaths: ../magic/nand.gds
+*lvsLayoutPrimary: nand
+*lvsSourcePath: ../sue/nand.sp
+*lvsSourcePrimary: nand
+*lvsSourceSystem: SPICE
+*lvsSpiceFile: extracted.sp
+*lvsPowerNames: vdd 
+*lvsGroundNames: gnd
+*lvsIgnorePorts: 1
+*lvsERCDatabase: nand.erc.db
+*lvsERCSummaryFile: nand.erc.summary
+*lvsReportFile: nand.lvs.report
+*lvsMaskDBFile: nand.maskdb
+*cmnFDILayerMapFile: /classes/ecen4303F17/calibre/layer.map
+*cmnFDIUseLayerMap: 1

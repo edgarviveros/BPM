@@ -1,0 +1,35 @@
+* SPICE3 file created from xor2.ext - technology: scmos
+
+.option scale=0.3u
+
+M1000 vdd A a_17_6# vdd pfet w=40 l=2
++  ad=560 pd=188 as=200 ps=90
+M1001 a_33_54# a_28_44# vdd vdd pfet w=40 l=2
++  ad=120 pd=86 as=0 ps=0
+M1002 Y A a_33_54# vdd pfet w=40 l=2
++  ad=400 pd=100 as=0 ps=0
+M1003 a_50_54# a_17_6# Y vdd pfet w=40 l=2
++  ad=120 pd=86 as=0 ps=0
+M1004 vdd B a_50_54# vdd pfet w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 a_28_44# B vdd vdd pfet w=40 l=2
++  ad=200 pd=90 as=0 ps=0
+M1006 gnd A a_17_6# Gnd nfet w=20 l=2
++  ad=280 pd=108 as=100 ps=50
+M1007 a_33_6# a_28_44# gnd Gnd nfet w=20 l=2
++  ad=60 pd=46 as=0 ps=0
+M1008 Y a_17_6# a_33_6# Gnd nfet w=20 l=2
++  ad=200 pd=60 as=0 ps=0
+M1009 a_50_6# A Y Gnd nfet w=20 l=2
++  ad=60 pd=46 as=0 ps=0
+M1010 gnd B a_50_6# Gnd nfet w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 a_28_44# B gnd Gnd nfet w=20 l=2
++  ad=100 pd=50 as=0 ps=0
+C0 vdd a_17_6# 2.059560fF
+C1 vdd a_28_44# 2.119800fF
+C2 gnd gnd! 4.464000fF
+C3 Y gnd! 3.130440fF
+C4 a_17_6# gnd! 4.770780fF
+C5 a_28_44# gnd! 4.949670fF
+C6 vdd gnd! 13.245159fF

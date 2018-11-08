@@ -1,0 +1,85 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_reg8 {} {
+  make name_net_s -name {A[0]} -origin {150 340}
+  make name_net_s -name {A[3]} -origin {150 640}
+  make name_net_s -name {A[2]} -origin {150 540}
+  make name_net_s -name {A[1]} -origin {150 440}
+  make name_net_s -name {Z[0]} -origin {470 310}
+  make name_net_s -name {Z[3]} -origin {470 610}
+  make name_net_s -name {Z[2]} -origin {470 510}
+  make name_net_s -name {Z[1]} -origin {470 410}
+  make dffpos -origin {340 690}
+  make dffpos -origin {340 590}
+  make dffpos -origin {340 490}
+  make dffpos -origin {340 390}
+  make dffpos -origin {340 1090}
+  make dffpos -origin {340 990}
+  make dffpos -origin {340 890}
+  make dffpos -origin {340 790}
+  make name_net_s -name {A[4]} -origin {150 740}
+  make name_net_s -name {A[5]} -origin {150 840}
+  make name_net_s -name {A[6]} -origin {150 940}
+  make name_net_s -name {A[7]} -origin {150 1040}
+  make name_net_s -name {Z[7]} -origin {470 1010}
+  make name_net_s -name {Z[6]} -origin {470 910}
+  make name_net_s -name {Z[5]} -origin {470 810}
+  make name_net_s -name {Z[4]} -origin {470 710}
+  make and -origin {10 310}
+  make input -name EN -origin {-60 310}
+  make input -name clk -origin {-60 270}
+  make input -name {A[7:0]} -origin {110 220}
+  make output -name {Z[7:0]} -origin {110 200}
+  make_wire 110 410 240 410
+  make_wire 110 510 240 510
+  make_wire 110 610 240 610
+  make_wire 150 340 240 340
+  make_wire 150 440 240 440
+  make_wire 150 640 240 640
+  make_wire 150 540 240 540
+  make_wire 470 310 440 310
+  make_wire 470 610 440 610
+  make_wire 470 510 440 510
+  make_wire 470 410 440 410
+  make_wire 110 410 110 510
+  make_wire 110 510 110 610
+  make_wire 110 710 240 710
+  make_wire 110 810 240 810
+  make_wire 110 910 240 910
+  make_wire 110 1010 240 1010
+  make_wire 150 740 240 740
+  make_wire 150 840 240 840
+  make_wire 150 1040 240 1040
+  make_wire 150 940 240 940
+  make_wire 470 710 440 710
+  make_wire 470 1010 440 1010
+  make_wire 470 910 440 910
+  make_wire 470 810 440 810
+  make_wire 110 810 110 910
+  make_wire 110 910 110 1010
+  make_wire 110 610 110 710
+  make_wire 110 810 110 710
+  make_wire 110 310 110 410
+  make_wire 70 310 110 310
+  make_wire 110 310 240 310
+  make_wire -60 310 -50 310
+  make_wire -60 270 -50 270
+}
+
+proc ICON_reg8 args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name {}} {M {}} {dpc {}}}
+  icon_term -type input -origin {-110 -40} -name {A[7:0]}
+  icon_term -type input -origin {-110 0} -name clk
+  icon_term -type input -origin {-110 40} -name EN
+  icon_term -type output -origin {110 0} -name {Z[7:0]}
+  icon_property -origin {0 -70} -size large -anchor center -label reg8
+  icon_line -110 -100 110 -100 110 100 -110 100 -110 -100
+  icon_property -origin {-100 -40} -label {A[7:0]}
+  icon_property -origin {-100 0} -label clk
+  icon_property -origin {-100 40} -label EN
+  icon_property -origin {100 0} -anchor e -label {Z[7:0]}
+  icon_property -origin {-110 320} -type user -name name
+  icon_property -origin {-110 340} -type user -name M
+  icon_property -origin {-110 360} -type user -name dpc
+}
+

@@ -1,0 +1,17 @@
+*lvsRulesFile: /classes/ecen4303F17/calibre/calibreLVS_scn3me_subm.rul
+*lvsRunDir: .
+*lvsLayoutPaths: ../magic/xor2.gds
+*lvsLayoutPrimary: xor2
+*lvsSourcePath: ../sue/xor2.sp
+*lvsSourcePrimary: xor2
+*lvsSourceSystem: SPICE
+*lvsSpiceFile: extracted.sp
+*lvsPowerNames: vdd 
+*lvsGroundNames: gnd
+*lvsIgnorePorts: 1
+*lvsERCDatabase: xor2.erc.db
+*lvsERCSummaryFile: xor2.erc.summary
+*lvsReportFile: xor2.lvs.report
+*lvsMaskDBFile: xor2.maskdb
+*cmnFDILayerMapFile: /classes/ecen4303F17/calibre/layer.map
+*cmnFDIUseLayerMap: 1

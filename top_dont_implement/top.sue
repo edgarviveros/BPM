@@ -1,0 +1,64 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_top {} {
+  make input -name {mcand[3:0]} -origin {280 110}
+  make input -name {mplier[3:0]} -origin {280 140}
+  make output -name {q[7:0]} -origin {280 70}
+  make mux21x4 -origin {520 330}
+  make mux21x4 -origin {940 330}
+  make rca4 -origin {520 580}
+  make mux21x4 -origin {940 570}
+  make mux21x8 -origin {550 810}
+  make reg8 -origin {910 810}
+  make name_net_s -name {q[7:0]} -origin {1080 810}
+  make name_net_s -name {q[7:4]} -origin {330 290}
+  make global -orient RXY -name gnd -origin {290 30}
+  make name_net_s -name gnd -origin {330 330}
+  make name_net_s -name mcand -origin {760 330}
+  make name_net_s -name mcand2 -origin {690 330}
+  make input -name init -origin {280 170}
+  make name_net_s -name {q[3:0]} -origin {760 530}
+  make name_net_s -name mplier -origin {760 570}
+  make name_net_s -name {q[0]} -origin {760 370}
+  make name_net_s -name init -origin {330 370}
+  make name_net_s -name init -origin {760 610}
+  make name_net_s -name mcand2 -origin {360 540}
+  make name_net_s -name mcand4 -origin {360 580}
+  make name_net_s -name mcand5 -origin {690 580}
+  make name_net_s -name cout -origin {690 540}
+  make name_net_s -name 4'h0 -origin {760 290}
+  make name_net_s -name init -origin {360 850}
+  make name_net_s -name clk -origin {760 810}
+  make name_net_s -name en -origin {760 850}
+  make input -name en -origin {280 200}
+  make name_net_s -name {{cout,mcand5,mcand3[3:1]}} -origin {360 770}
+  make name_net_s -name {mcand3[3:0]} -origin {1120 570}
+  make name_net_s -name {{4'h0,mcand3[3:0]}} -origin {360 810}
+  make name_net_s -name {mcand4[3:0]} -origin {1120 330}
+  make_wire 690 810 730 810
+  make_wire 730 810 730 770
+  make_wire 730 770 800 770
+  make_wire 1080 810 1020 810
+  make_wire 690 330 660 330
+  make_wire 1120 330 1080 330
+  make_wire 800 330 760 330
+  make_wire 800 290 760 290
+  make_wire 330 330 380 330
+  make_wire 330 290 380 290
+  make_wire 360 810 410 810
+  make_wire 360 770 410 770
+  make_wire 800 570 760 570
+  make_wire 800 530 760 530
+  make_wire 1120 570 1080 570
+  make_wire 760 370 800 370
+  make_wire 330 370 380 370
+  make_wire 760 610 800 610
+  make_wire 360 540 410 540
+  make_wire 360 580 410 580
+  make_wire 690 540 630 540
+  make_wire 690 580 630 580
+  make_wire 360 850 410 850
+  make_wire 760 810 800 810
+  make_wire 760 850 800 850
+}
+

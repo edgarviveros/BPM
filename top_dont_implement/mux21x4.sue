@@ -1,0 +1,74 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_mux21x4 {} {
+  make mux21 -origin {340 350}
+  make mux21 -origin {340 450}
+  make mux21 -origin {340 550}
+  make mux21 -origin {340 650}
+  make inv -origin {140 330}
+  make inv -origin {140 430}
+  make inv -origin {140 530}
+  make inv -origin {140 630}
+  make input -name Sel -origin {90 310}
+  make input -name {A[3:0]} -origin {110 210}
+  make input -name {B[3:0]} -origin {110 230}
+  make name_net_s -name {A[0]} -origin {150 270}
+  make name_net_s -name {B[0]} -origin {150 290}
+  make name_net_s -name {B[3]} -origin {150 590}
+  make name_net_s -name {A[3]} -origin {150 570}
+  make name_net_s -name {B[2]} -origin {150 490}
+  make name_net_s -name {A[2]} -origin {150 470}
+  make name_net_s -name {B[1]} -origin {150 390}
+  make name_net_s -name {A[1]} -origin {150 370}
+  make output -name {Z[3:0]} -origin {110 190}
+  make name_net_s -name {Z[0]} -origin {470 270}
+  make name_net_s -name {Z[3]} -origin {470 570}
+  make name_net_s -name {Z[2]} -origin {470 470}
+  make name_net_s -name {Z[1]} -origin {470 370}
+  make_wire 110 310 110 330
+  make_wire 110 330 120 330
+  make_wire 110 310 90 310
+  make_wire 110 310 240 310
+  make_wire 110 630 120 630
+  make_wire 120 530 110 530
+  make_wire 110 430 120 430
+  make_wire 110 410 240 410
+  make_wire 110 410 110 430
+  make_wire 110 410 110 330
+  make_wire 110 510 240 510
+  make_wire 110 510 110 430
+  make_wire 110 510 110 530
+  make_wire 110 610 240 610
+  make_wire 110 610 110 530
+  make_wire 110 610 110 630
+  make_wire 150 270 240 270
+  make_wire 150 290 240 290
+  make_wire 150 370 240 370
+  make_wire 150 390 240 390
+  make_wire 150 570 240 570
+  make_wire 150 590 240 590
+  make_wire 150 470 240 470
+  make_wire 150 490 240 490
+  make_wire 470 270 440 270
+  make_wire 470 570 440 570
+  make_wire 470 470 440 470
+  make_wire 470 370 440 370
+}
+
+proc ICON_mux21x4 args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name {}} {M {}} {dpc {}}}
+  icon_term -type input -origin {-140 -40} -name {A[3:0]}
+  icon_term -type input -origin {-140 0} -name {B[3:0]}
+  icon_term -type input -origin {-140 40} -name Sel
+  icon_term -type output -origin {140 0} -name {Z[3:0]}
+  icon_property -origin {0 -80} -size large -anchor center -label mux21x4
+  icon_line -140 -100 140 -100 140 100 -140 100 -140 -100
+  icon_property -origin {-130 -40} -label {A[3:0]}
+  icon_property -origin {-130 0} -label {B[3:0]}
+  icon_property -origin {-130 40} -label Sel
+  icon_property -origin {130 0} -anchor e -label {Z[3:0]}
+  icon_property -origin {-140 320} -type user -name name
+  icon_property -origin {-140 340} -type user -name M
+  icon_property -origin {-140 360} -type user -name dpc
+}
+

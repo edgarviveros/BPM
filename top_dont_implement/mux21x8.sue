@@ -1,0 +1,122 @@
+# SUE version MMI_SUE5.6.37
+
+proc SCHEMATIC_mux21x8 {} {
+  make mux21 -origin {340 350}
+  make mux21 -origin {340 450}
+  make mux21 -origin {340 550}
+  make mux21 -origin {340 650}
+  make inv -origin {140 330}
+  make inv -origin {140 430}
+  make inv -origin {140 530}
+  make inv -origin {140 630}
+  make input -name Sel -origin {90 310}
+  make name_net_s -name {A[0]} -origin {150 270}
+  make name_net_s -name {B[0]} -origin {150 290}
+  make name_net_s -name {B[3]} -origin {150 590}
+  make name_net_s -name {A[3]} -origin {150 570}
+  make name_net_s -name {B[2]} -origin {150 490}
+  make name_net_s -name {A[2]} -origin {150 470}
+  make name_net_s -name {B[1]} -origin {150 390}
+  make name_net_s -name {A[1]} -origin {150 370}
+  make name_net_s -name {Z[0]} -origin {470 270}
+  make name_net_s -name {Z[3]} -origin {470 570}
+  make name_net_s -name {Z[2]} -origin {470 470}
+  make name_net_s -name {Z[1]} -origin {470 370}
+  make mux21 -origin {340 750}
+  make mux21 -origin {340 850}
+  make mux21 -origin {340 950}
+  make mux21 -origin {340 1050}
+  make inv -origin {140 730}
+  make inv -origin {140 830}
+  make inv -origin {140 930}
+  make inv -origin {140 1030}
+  make name_net_s -name {A[4]} -origin {150 670}
+  make name_net_s -name {B[4]} -origin {150 690}
+  make name_net_s -name {A[5]} -origin {150 770}
+  make name_net_s -name {B[5]} -origin {150 790}
+  make name_net_s -name {A[6]} -origin {150 870}
+  make name_net_s -name {B[6]} -origin {150 890}
+  make name_net_s -name {A[7]} -origin {150 970}
+  make name_net_s -name {B[7]} -origin {150 990}
+  make name_net_s -name {Z[7]} -origin {470 970}
+  make name_net_s -name {Z[6]} -origin {470 870}
+  make name_net_s -name {Z[5]} -origin {470 770}
+  make name_net_s -name {Z[4]} -origin {470 670}
+  make output -name {Z[7:0]} -origin {110 190}
+  make input -name {A[7:0]} -origin {110 210}
+  make input -name {B[7:0]} -origin {110 230}
+  make_wire 110 330 120 330
+  make_wire 110 310 90 310
+  make_wire 110 310 240 310
+  make_wire 110 630 120 630
+  make_wire 120 530 110 530
+  make_wire 110 430 120 430
+  make_wire 110 410 240 410
+  make_wire 110 510 240 510
+  make_wire 110 610 240 610
+  make_wire 150 270 240 270
+  make_wire 150 290 240 290
+  make_wire 150 370 240 370
+  make_wire 150 390 240 390
+  make_wire 150 570 240 570
+  make_wire 150 590 240 590
+  make_wire 150 470 240 470
+  make_wire 150 490 240 490
+  make_wire 470 270 440 270
+  make_wire 470 570 440 570
+  make_wire 470 470 440 470
+  make_wire 470 370 440 370
+  make_wire 110 710 110 730
+  make_wire 110 730 120 730
+  make_wire 110 710 240 710
+  make_wire 110 1030 120 1030
+  make_wire 120 930 110 930
+  make_wire 110 830 120 830
+  make_wire 110 810 240 810
+  make_wire 110 810 110 830
+  make_wire 110 810 110 730
+  make_wire 110 910 240 910
+  make_wire 110 910 110 830
+  make_wire 110 910 110 930
+  make_wire 110 1010 240 1010
+  make_wire 110 1010 110 930
+  make_wire 110 1010 110 1030
+  make_wire 150 670 240 670
+  make_wire 150 690 240 690
+  make_wire 150 770 240 770
+  make_wire 150 790 240 790
+  make_wire 150 970 240 970
+  make_wire 150 990 240 990
+  make_wire 150 870 240 870
+  make_wire 150 890 240 890
+  make_wire 470 670 440 670
+  make_wire 470 970 440 970
+  make_wire 470 870 440 870
+  make_wire 470 770 440 770
+  make_wire 110 310 110 330
+  make_wire 110 330 110 410
+  make_wire 110 410 110 430
+  make_wire 110 430 110 510
+  make_wire 110 510 110 530
+  make_wire 110 530 110 610
+  make_wire 110 610 110 630
+  make_wire 110 630 110 710
+}
+
+proc ICON_mux21x8 args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name {}} {M {}} {dpc {}}}
+  icon_term -type input -origin {-140 -40} -name {A[7:0]}
+  icon_term -type input -origin {-140 0} -name {B[7:0]}
+  icon_term -type input -origin {-140 40} -name Sel
+  icon_term -type output -origin {140 0} -name {Z[7:0]}
+  icon_property -origin {0 -70} -size large -anchor center -label mux21x8
+  icon_line -140 -100 140 -100 140 100 -140 100 -140 -100
+  icon_property -origin {-130 -40} -label {A[7:0]}
+  icon_property -origin {-130 0} -label {B[7:0]}
+  icon_property -origin {-130 40} -label Sel
+  icon_property -origin {130 0} -anchor e -label {Z[7:0]}
+  icon_property -origin {-140 320} -type user -name name
+  icon_property -origin {-140 340} -type user -name M
+  icon_property -origin {-140 360} -type user -name dpc
+}
+

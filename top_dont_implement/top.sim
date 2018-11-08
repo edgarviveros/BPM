@@ -1,0 +1,985 @@
+| units: 30.0  tech: scmos  format: MIT
+A en input
+A init input
+A mcand[0] input
+A mcand[1] input
+A mcand[2] input
+A mcand[3] input
+A mplier[0] input
+A mplier[1] input
+A mplier[2] input
+A mplier[3] input
+A q[0] output
+A q[1] output
+A q[2] output
+A q[3] output
+A q[4] output
+A q[5] output
+A q[6] output
+A q[7] output
+| begin mux21x4 520 330
+| begin mux21x4.mux21 340 350
+| device mux21x4.mux21.nmos 210 150
+n init gnd mcand2[0] 2 10
+| device mux21x4.mux21.pmos 210 150
+p mux21x4.net_2 gnd mcand2[0] 2 10
+| device mux21x4.mux21.nmos_1 210 340
+n mux21x4.net_2 q[4] mcand2[0] 2 10
+| device mux21x4.mux21.pmos_1 210 340
+p init q[4] mcand2[0] 2 10
+| end mux21x4.mux21
+| begin mux21x4.mux21_1 340 450
+| device mux21x4.mux21_1.nmos 210 150
+n init gnd mcand2[1] 2 10
+| device mux21x4.mux21_1.pmos 210 150
+p mux21x4.net_3 gnd mcand2[1] 2 10
+| device mux21x4.mux21_1.nmos_1 210 340
+n mux21x4.net_3 q[5] mcand2[1] 2 10
+| device mux21x4.mux21_1.pmos_1 210 340
+p init q[5] mcand2[1] 2 10
+| end mux21x4.mux21_1
+| begin mux21x4.mux21_2 340 550
+| device mux21x4.mux21_2.nmos 210 150
+n init gnd mcand2[2] 2 10
+| device mux21x4.mux21_2.pmos 210 150
+p mux21x4.net_4 gnd mcand2[2] 2 10
+| device mux21x4.mux21_2.nmos_1 210 340
+n mux21x4.net_4 q[6] mcand2[2] 2 10
+| device mux21x4.mux21_2.pmos_1 210 340
+p init q[6] mcand2[2] 2 10
+| end mux21x4.mux21_2
+| begin mux21x4.mux21_3 340 650
+| device mux21x4.mux21_3.nmos 210 150
+n init gnd mcand2[3] 2 10
+| device mux21x4.mux21_3.pmos 210 150
+p mux21x4.net_1 gnd mcand2[3] 2 10
+| device mux21x4.mux21_3.nmos_1 210 340
+n mux21x4.net_1 q[7] mcand2[3] 2 10
+| device mux21x4.mux21_3.pmos_1 210 340
+p init q[7] mcand2[3] 2 10
+| end mux21x4.mux21_3
+| begin mux21x4.inv 140 330
+| device mux21x4.inv.p0 400 220
+p init Vdd mux21x4.net_2 2 20
+| device mux21x4.inv.n0 400 380
+n init Gnd mux21x4.net_2 2 10
+| end mux21x4.inv
+| begin mux21x4.inv_1 140 430
+| device mux21x4.inv_1.p0 400 220
+p init Vdd mux21x4.net_3 2 20
+| device mux21x4.inv_1.n0 400 380
+n init Gnd mux21x4.net_3 2 10
+| end mux21x4.inv_1
+| begin mux21x4.inv_2 140 530
+| device mux21x4.inv_2.p0 400 220
+p init Vdd mux21x4.net_4 2 20
+| device mux21x4.inv_2.n0 400 380
+n init Gnd mux21x4.net_4 2 10
+| end mux21x4.inv_2
+| begin mux21x4.inv_3 140 630
+| device mux21x4.inv_3.p0 400 220
+p init Vdd mux21x4.net_1 2 20
+| device mux21x4.inv_3.n0 400 380
+n init Gnd mux21x4.net_1 2 10
+| end mux21x4.inv_3
+| end mux21x4
+| begin mux21x4_1 940 330
+| begin mux21x4_1.mux21 340 350
+| device mux21x4_1.mux21.nmos 210 150
+n q[0] mcand[0] mcand4[0] 2 10
+| device mux21x4_1.mux21.pmos 210 150
+p mux21x4_1.net_2 mcand[0] mcand4[0] 2 10
+| device mux21x4_1.mux21.nmos_1 210 340
+n mux21x4_1.net_2 gnd mcand4[0] 2 10
+| device mux21x4_1.mux21.pmos_1 210 340
+p q[0] gnd mcand4[0] 2 10
+| end mux21x4_1.mux21
+| begin mux21x4_1.mux21_1 340 450
+| device mux21x4_1.mux21_1.nmos 210 150
+n q[0] mcand[1] mcand4[1] 2 10
+| device mux21x4_1.mux21_1.pmos 210 150
+p mux21x4_1.net_3 mcand[1] mcand4[1] 2 10
+| device mux21x4_1.mux21_1.nmos_1 210 340
+n mux21x4_1.net_3 gnd mcand4[1] 2 10
+| device mux21x4_1.mux21_1.pmos_1 210 340
+p q[0] gnd mcand4[1] 2 10
+| end mux21x4_1.mux21_1
+| begin mux21x4_1.mux21_2 340 550
+| device mux21x4_1.mux21_2.nmos 210 150
+n q[0] mcand[2] mcand4[2] 2 10
+| device mux21x4_1.mux21_2.pmos 210 150
+p mux21x4_1.net_4 mcand[2] mcand4[2] 2 10
+| device mux21x4_1.mux21_2.nmos_1 210 340
+n mux21x4_1.net_4 gnd mcand4[2] 2 10
+| device mux21x4_1.mux21_2.pmos_1 210 340
+p q[0] gnd mcand4[2] 2 10
+| end mux21x4_1.mux21_2
+| begin mux21x4_1.mux21_3 340 650
+| device mux21x4_1.mux21_3.nmos 210 150
+n q[0] mcand[3] mcand4[3] 2 10
+| device mux21x4_1.mux21_3.pmos 210 150
+p mux21x4_1.net_1 mcand[3] mcand4[3] 2 10
+| device mux21x4_1.mux21_3.nmos_1 210 340
+n mux21x4_1.net_1 gnd mcand4[3] 2 10
+| device mux21x4_1.mux21_3.pmos_1 210 340
+p q[0] gnd mcand4[3] 2 10
+| end mux21x4_1.mux21_3
+| begin mux21x4_1.inv 140 330
+| device mux21x4_1.inv.p0 400 220
+p q[0] Vdd mux21x4_1.net_2 2 20
+| device mux21x4_1.inv.n0 400 380
+n q[0] Gnd mux21x4_1.net_2 2 10
+| end mux21x4_1.inv
+| begin mux21x4_1.inv_1 140 430
+| device mux21x4_1.inv_1.p0 400 220
+p q[0] Vdd mux21x4_1.net_3 2 20
+| device mux21x4_1.inv_1.n0 400 380
+n q[0] Gnd mux21x4_1.net_3 2 10
+| end mux21x4_1.inv_1
+| begin mux21x4_1.inv_2 140 530
+| device mux21x4_1.inv_2.p0 400 220
+p q[0] Vdd mux21x4_1.net_4 2 20
+| device mux21x4_1.inv_2.n0 400 380
+n q[0] Gnd mux21x4_1.net_4 2 10
+| end mux21x4_1.inv_2
+| begin mux21x4_1.inv_3 140 630
+| device mux21x4_1.inv_3.p0 400 220
+p q[0] Vdd mux21x4_1.net_1 2 20
+| device mux21x4_1.inv_3.n0 400 380
+n q[0] Gnd mux21x4_1.net_1 2 10
+| end mux21x4_1.inv_3
+| end mux21x4_1
+| begin rca4 520 580
+| begin rca4.FA 350 410
+| device rca4.FA.nmos 430 370
+n rca4.FA.net_2 rca4.FA.net_9 rca4.FA.net_10 2 10
+| device rca4.FA.nmos_1 250 450
+n mcand2[0] gnd rca4.FA.net_9 2 10
+| device rca4.FA.nmos_2 430 450
+n mcand4[0] gnd rca4.FA.net_9 2 10
+| device rca4.FA.nmos_3 610 450
+n gnd gnd rca4.FA.net_9 2 10
+| device rca4.FA.nmos_4 810 370
+n gnd rca4.FA.net_12 rca4.FA.net_10 2 10
+| device rca4.FA.nmos_5 810 450
+n mcand4[0] rca4.FA.net_8 rca4.FA.net_12 2 10
+| device rca4.FA.nmos_6 810 530
+n mcand2[0] gnd rca4.FA.net_8 2 10
+| device rca4.FA.nmos_7 -250 370
+n gnd rca4.FA.net_5 rca4.FA.net_2 2 10
+| device rca4.FA.nmos_8 -320 450
+n mcand2[0] gnd rca4.FA.net_5 2 10
+| device rca4.FA.nmos_9 -150 450
+n mcand4[0] gnd rca4.FA.net_5 2 10
+| device rca4.FA.nmos_10 40 370
+n mcand4[0] rca4.FA.net_4 rca4.FA.net_2 2 10
+| device rca4.FA.nmos_11 40 450
+n mcand2[0] gnd rca4.FA.net_4 2 10
+| device rca4.FA.pmos 250 210
+p mcand2[0] vdd rca4.FA.net_11 2 20
+| device rca4.FA.pmos_1 430 210
+p mcand4[0] vdd rca4.FA.net_11 2 20
+| device rca4.FA.pmos_2 610 210
+p gnd vdd rca4.FA.net_11 2 20
+| device rca4.FA.pmos_3 430 290
+p rca4.FA.net_2 rca4.FA.net_11 rca4.FA.net_10 2 20
+| device rca4.FA.pmos_4 810 210
+p mcand4[0] rca4.FA.net_3 rca4.FA.net_1 2 20
+| device rca4.FA.pmos_5 810 290
+p gnd rca4.FA.net_1 rca4.FA.net_10 2 20
+| device rca4.FA.pmos_6 810 130
+p mcand2[0] vdd rca4.FA.net_3 2 20
+| device rca4.FA.pmos_7 -320 210
+p mcand2[0] vdd rca4.FA.net_6 2 20
+| device rca4.FA.pmos_8 -150 210
+p mcand4[0] vdd rca4.FA.net_6 2 20
+| device rca4.FA.pmos_9 -250 290
+p gnd rca4.FA.net_6 rca4.FA.net_2 2 20
+| device rca4.FA.pmos_10 40 290
+p mcand4[0] rca4.FA.net_7 rca4.FA.net_2 2 20
+| device rca4.FA.pmos_11 40 210
+p mcand2[0] vdd rca4.FA.net_7 2 20
+| begin rca4.FA.inv 850 680
+| device rca4.FA.inv.p0 400 220
+p rca4.FA.net_2 Vdd rca4.net_2 2 20
+| device rca4.FA.inv.n0 400 380
+n rca4.FA.net_2 Gnd rca4.net_2 2 10
+| end rca4.FA.inv
+| begin rca4.FA.inv_1 860 330
+| device rca4.FA.inv_1.p0 400 220
+p rca4.FA.net_10 Vdd mcand5[0] 2 20
+| device rca4.FA.inv_1.n0 400 380
+n rca4.FA.net_10 Gnd mcand5[0] 2 10
+| end rca4.FA.inv_1
+| end rca4.FA
+| begin rca4.FA_1 670 410
+| device rca4.FA_1.nmos 430 370
+n rca4.FA_1.net_2 rca4.FA_1.net_9 rca4.FA_1.net_10 2 10
+| device rca4.FA_1.nmos_1 250 450
+n mcand2[1] gnd rca4.FA_1.net_9 2 10
+| device rca4.FA_1.nmos_2 430 450
+n mcand4[1] gnd rca4.FA_1.net_9 2 10
+| device rca4.FA_1.nmos_3 610 450
+n rca4.net_2 gnd rca4.FA_1.net_9 2 10
+| device rca4.FA_1.nmos_4 810 370
+n rca4.net_2 rca4.FA_1.net_12 rca4.FA_1.net_10 2 10
+| device rca4.FA_1.nmos_5 810 450
+n mcand4[1] rca4.FA_1.net_8 rca4.FA_1.net_12 2 10
+| device rca4.FA_1.nmos_6 810 530
+n mcand2[1] gnd rca4.FA_1.net_8 2 10
+| device rca4.FA_1.nmos_7 -250 370
+n rca4.net_2 rca4.FA_1.net_5 rca4.FA_1.net_2 2 10
+| device rca4.FA_1.nmos_8 -320 450
+n mcand2[1] gnd rca4.FA_1.net_5 2 10
+| device rca4.FA_1.nmos_9 -150 450
+n mcand4[1] gnd rca4.FA_1.net_5 2 10
+| device rca4.FA_1.nmos_10 40 370
+n mcand4[1] rca4.FA_1.net_4 rca4.FA_1.net_2 2 10
+| device rca4.FA_1.nmos_11 40 450
+n mcand2[1] gnd rca4.FA_1.net_4 2 10
+| device rca4.FA_1.pmos 250 210
+p mcand2[1] vdd rca4.FA_1.net_11 2 20
+| device rca4.FA_1.pmos_1 430 210
+p mcand4[1] vdd rca4.FA_1.net_11 2 20
+| device rca4.FA_1.pmos_2 610 210
+p rca4.net_2 vdd rca4.FA_1.net_11 2 20
+| device rca4.FA_1.pmos_3 430 290
+p rca4.FA_1.net_2 rca4.FA_1.net_11 rca4.FA_1.net_10 2 20
+| device rca4.FA_1.pmos_4 810 210
+p mcand4[1] rca4.FA_1.net_3 rca4.FA_1.net_1 2 20
+| device rca4.FA_1.pmos_5 810 290
+p rca4.net_2 rca4.FA_1.net_1 rca4.FA_1.net_10 2 20
+| device rca4.FA_1.pmos_6 810 130
+p mcand2[1] vdd rca4.FA_1.net_3 2 20
+| device rca4.FA_1.pmos_7 -320 210
+p mcand2[1] vdd rca4.FA_1.net_6 2 20
+| device rca4.FA_1.pmos_8 -150 210
+p mcand4[1] vdd rca4.FA_1.net_6 2 20
+| device rca4.FA_1.pmos_9 -250 290
+p rca4.net_2 rca4.FA_1.net_6 rca4.FA_1.net_2 2 20
+| device rca4.FA_1.pmos_10 40 290
+p mcand4[1] rca4.FA_1.net_7 rca4.FA_1.net_2 2 20
+| device rca4.FA_1.pmos_11 40 210
+p mcand2[1] vdd rca4.FA_1.net_7 2 20
+| begin rca4.FA_1.inv 850 680
+| device rca4.FA_1.inv.p0 400 220
+p rca4.FA_1.net_2 Vdd rca4.net_3 2 20
+| device rca4.FA_1.inv.n0 400 380
+n rca4.FA_1.net_2 Gnd rca4.net_3 2 10
+| end rca4.FA_1.inv
+| begin rca4.FA_1.inv_1 860 330
+| device rca4.FA_1.inv_1.p0 400 220
+p rca4.FA_1.net_10 Vdd mcand5[1] 2 20
+| device rca4.FA_1.inv_1.n0 400 380
+n rca4.FA_1.net_10 Gnd mcand5[1] 2 10
+| end rca4.FA_1.inv_1
+| end rca4.FA_1
+| begin rca4.FA_2 1010 410
+| device rca4.FA_2.nmos 430 370
+n rca4.FA_2.net_2 rca4.FA_2.net_9 rca4.FA_2.net_10 2 10
+| device rca4.FA_2.nmos_1 250 450
+n mcand2[2] gnd rca4.FA_2.net_9 2 10
+| device rca4.FA_2.nmos_2 430 450
+n mcand4[2] gnd rca4.FA_2.net_9 2 10
+| device rca4.FA_2.nmos_3 610 450
+n rca4.net_3 gnd rca4.FA_2.net_9 2 10
+| device rca4.FA_2.nmos_4 810 370
+n rca4.net_3 rca4.FA_2.net_12 rca4.FA_2.net_10 2 10
+| device rca4.FA_2.nmos_5 810 450
+n mcand4[2] rca4.FA_2.net_8 rca4.FA_2.net_12 2 10
+| device rca4.FA_2.nmos_6 810 530
+n mcand2[2] gnd rca4.FA_2.net_8 2 10
+| device rca4.FA_2.nmos_7 -250 370
+n rca4.net_3 rca4.FA_2.net_5 rca4.FA_2.net_2 2 10
+| device rca4.FA_2.nmos_8 -320 450
+n mcand2[2] gnd rca4.FA_2.net_5 2 10
+| device rca4.FA_2.nmos_9 -150 450
+n mcand4[2] gnd rca4.FA_2.net_5 2 10
+| device rca4.FA_2.nmos_10 40 370
+n mcand4[2] rca4.FA_2.net_4 rca4.FA_2.net_2 2 10
+| device rca4.FA_2.nmos_11 40 450
+n mcand2[2] gnd rca4.FA_2.net_4 2 10
+| device rca4.FA_2.pmos 250 210
+p mcand2[2] vdd rca4.FA_2.net_11 2 20
+| device rca4.FA_2.pmos_1 430 210
+p mcand4[2] vdd rca4.FA_2.net_11 2 20
+| device rca4.FA_2.pmos_2 610 210
+p rca4.net_3 vdd rca4.FA_2.net_11 2 20
+| device rca4.FA_2.pmos_3 430 290
+p rca4.FA_2.net_2 rca4.FA_2.net_11 rca4.FA_2.net_10 2 20
+| device rca4.FA_2.pmos_4 810 210
+p mcand4[2] rca4.FA_2.net_3 rca4.FA_2.net_1 2 20
+| device rca4.FA_2.pmos_5 810 290
+p rca4.net_3 rca4.FA_2.net_1 rca4.FA_2.net_10 2 20
+| device rca4.FA_2.pmos_6 810 130
+p mcand2[2] vdd rca4.FA_2.net_3 2 20
+| device rca4.FA_2.pmos_7 -320 210
+p mcand2[2] vdd rca4.FA_2.net_6 2 20
+| device rca4.FA_2.pmos_8 -150 210
+p mcand4[2] vdd rca4.FA_2.net_6 2 20
+| device rca4.FA_2.pmos_9 -250 290
+p rca4.net_3 rca4.FA_2.net_6 rca4.FA_2.net_2 2 20
+| device rca4.FA_2.pmos_10 40 290
+p mcand4[2] rca4.FA_2.net_7 rca4.FA_2.net_2 2 20
+| device rca4.FA_2.pmos_11 40 210
+p mcand2[2] vdd rca4.FA_2.net_7 2 20
+| begin rca4.FA_2.inv 850 680
+| device rca4.FA_2.inv.p0 400 220
+p rca4.FA_2.net_2 Vdd rca4.net_1 2 20
+| device rca4.FA_2.inv.n0 400 380
+n rca4.FA_2.net_2 Gnd rca4.net_1 2 10
+| end rca4.FA_2.inv
+| begin rca4.FA_2.inv_1 860 330
+| device rca4.FA_2.inv_1.p0 400 220
+p rca4.FA_2.net_10 Vdd mcand5[2] 2 20
+| device rca4.FA_2.inv_1.n0 400 380
+n rca4.FA_2.net_10 Gnd mcand5[2] 2 10
+| end rca4.FA_2.inv_1
+| end rca4.FA_2
+| begin rca4.FA_3 1360 410
+| device rca4.FA_3.nmos 430 370
+n rca4.FA_3.net_2 rca4.FA_3.net_9 rca4.FA_3.net_10 2 10
+| device rca4.FA_3.nmos_1 250 450
+n mcand2[3] gnd rca4.FA_3.net_9 2 10
+| device rca4.FA_3.nmos_2 430 450
+n mcand4[3] gnd rca4.FA_3.net_9 2 10
+| device rca4.FA_3.nmos_3 610 450
+n rca4.net_1 gnd rca4.FA_3.net_9 2 10
+| device rca4.FA_3.nmos_4 810 370
+n rca4.net_1 rca4.FA_3.net_12 rca4.FA_3.net_10 2 10
+| device rca4.FA_3.nmos_5 810 450
+n mcand4[3] rca4.FA_3.net_8 rca4.FA_3.net_12 2 10
+| device rca4.FA_3.nmos_6 810 530
+n mcand2[3] gnd rca4.FA_3.net_8 2 10
+| device rca4.FA_3.nmos_7 -250 370
+n rca4.net_1 rca4.FA_3.net_5 rca4.FA_3.net_2 2 10
+| device rca4.FA_3.nmos_8 -320 450
+n mcand2[3] gnd rca4.FA_3.net_5 2 10
+| device rca4.FA_3.nmos_9 -150 450
+n mcand4[3] gnd rca4.FA_3.net_5 2 10
+| device rca4.FA_3.nmos_10 40 370
+n mcand4[3] rca4.FA_3.net_4 rca4.FA_3.net_2 2 10
+| device rca4.FA_3.nmos_11 40 450
+n mcand2[3] gnd rca4.FA_3.net_4 2 10
+| device rca4.FA_3.pmos 250 210
+p mcand2[3] vdd rca4.FA_3.net_11 2 20
+| device rca4.FA_3.pmos_1 430 210
+p mcand4[3] vdd rca4.FA_3.net_11 2 20
+| device rca4.FA_3.pmos_2 610 210
+p rca4.net_1 vdd rca4.FA_3.net_11 2 20
+| device rca4.FA_3.pmos_3 430 290
+p rca4.FA_3.net_2 rca4.FA_3.net_11 rca4.FA_3.net_10 2 20
+| device rca4.FA_3.pmos_4 810 210
+p mcand4[3] rca4.FA_3.net_3 rca4.FA_3.net_1 2 20
+| device rca4.FA_3.pmos_5 810 290
+p rca4.net_1 rca4.FA_3.net_1 rca4.FA_3.net_10 2 20
+| device rca4.FA_3.pmos_6 810 130
+p mcand2[3] vdd rca4.FA_3.net_3 2 20
+| device rca4.FA_3.pmos_7 -320 210
+p mcand2[3] vdd rca4.FA_3.net_6 2 20
+| device rca4.FA_3.pmos_8 -150 210
+p mcand4[3] vdd rca4.FA_3.net_6 2 20
+| device rca4.FA_3.pmos_9 -250 290
+p rca4.net_1 rca4.FA_3.net_6 rca4.FA_3.net_2 2 20
+| device rca4.FA_3.pmos_10 40 290
+p mcand4[3] rca4.FA_3.net_7 rca4.FA_3.net_2 2 20
+| device rca4.FA_3.pmos_11 40 210
+p mcand2[3] vdd rca4.FA_3.net_7 2 20
+| begin rca4.FA_3.inv 850 680
+| device rca4.FA_3.inv.p0 400 220
+p rca4.FA_3.net_2 Vdd cout 2 20
+| device rca4.FA_3.inv.n0 400 380
+n rca4.FA_3.net_2 Gnd cout 2 10
+| end rca4.FA_3.inv
+| begin rca4.FA_3.inv_1 860 330
+| device rca4.FA_3.inv_1.p0 400 220
+p rca4.FA_3.net_10 Vdd mcand5[3] 2 20
+| device rca4.FA_3.inv_1.n0 400 380
+n rca4.FA_3.net_10 Gnd mcand5[3] 2 10
+| end rca4.FA_3.inv_1
+| end rca4.FA_3
+| end rca4
+| begin mux21x4_2 940 570
+| begin mux21x4_2.mux21 340 350
+| device mux21x4_2.mux21.nmos 210 150
+n init mplier[0] mcand3[0] 2 10
+| device mux21x4_2.mux21.pmos 210 150
+p mux21x4_2.net_2 mplier[0] mcand3[0] 2 10
+| device mux21x4_2.mux21.nmos_1 210 340
+n mux21x4_2.net_2 q[0] mcand3[0] 2 10
+| device mux21x4_2.mux21.pmos_1 210 340
+p init q[0] mcand3[0] 2 10
+| end mux21x4_2.mux21
+| begin mux21x4_2.mux21_1 340 450
+| device mux21x4_2.mux21_1.nmos 210 150
+n init mplier[1] mcand3[1] 2 10
+| device mux21x4_2.mux21_1.pmos 210 150
+p mux21x4_2.net_3 mplier[1] mcand3[1] 2 10
+| device mux21x4_2.mux21_1.nmos_1 210 340
+n mux21x4_2.net_3 q[1] mcand3[1] 2 10
+| device mux21x4_2.mux21_1.pmos_1 210 340
+p init q[1] mcand3[1] 2 10
+| end mux21x4_2.mux21_1
+| begin mux21x4_2.mux21_2 340 550
+| device mux21x4_2.mux21_2.nmos 210 150
+n init mplier[2] mcand3[2] 2 10
+| device mux21x4_2.mux21_2.pmos 210 150
+p mux21x4_2.net_4 mplier[2] mcand3[2] 2 10
+| device mux21x4_2.mux21_2.nmos_1 210 340
+n mux21x4_2.net_4 q[2] mcand3[2] 2 10
+| device mux21x4_2.mux21_2.pmos_1 210 340
+p init q[2] mcand3[2] 2 10
+| end mux21x4_2.mux21_2
+| begin mux21x4_2.mux21_3 340 650
+| device mux21x4_2.mux21_3.nmos 210 150
+n init mplier[3] mcand3[3] 2 10
+| device mux21x4_2.mux21_3.pmos 210 150
+p mux21x4_2.net_1 mplier[3] mcand3[3] 2 10
+| device mux21x4_2.mux21_3.nmos_1 210 340
+n mux21x4_2.net_1 q[3] mcand3[3] 2 10
+| device mux21x4_2.mux21_3.pmos_1 210 340
+p init q[3] mcand3[3] 2 10
+| end mux21x4_2.mux21_3
+| begin mux21x4_2.inv 140 330
+| device mux21x4_2.inv.p0 400 220
+p init Vdd mux21x4_2.net_2 2 20
+| device mux21x4_2.inv.n0 400 380
+n init Gnd mux21x4_2.net_2 2 10
+| end mux21x4_2.inv
+| begin mux21x4_2.inv_1 140 430
+| device mux21x4_2.inv_1.p0 400 220
+p init Vdd mux21x4_2.net_3 2 20
+| device mux21x4_2.inv_1.n0 400 380
+n init Gnd mux21x4_2.net_3 2 10
+| end mux21x4_2.inv_1
+| begin mux21x4_2.inv_2 140 530
+| device mux21x4_2.inv_2.p0 400 220
+p init Vdd mux21x4_2.net_4 2 20
+| device mux21x4_2.inv_2.n0 400 380
+n init Gnd mux21x4_2.net_4 2 10
+| end mux21x4_2.inv_2
+| begin mux21x4_2.inv_3 140 630
+| device mux21x4_2.inv_3.p0 400 220
+p init Vdd mux21x4_2.net_1 2 20
+| device mux21x4_2.inv_3.n0 400 380
+n init Gnd mux21x4_2.net_1 2 10
+| end mux21x4_2.inv_3
+| end mux21x4_2
+| begin mux21x8 550 810
+| begin mux21x8.mux21 340 350
+| device mux21x8.mux21.nmos 210 150
+n init mcand3[0] net_1[0] 2 10
+| device mux21x8.mux21.pmos 210 150
+p mux21x8.net_2 mcand3[0] net_1[0] 2 10
+| device mux21x8.mux21.nmos_1 210 340
+n mux21x8.net_2 mcand3[1] net_1[0] 2 10
+| device mux21x8.mux21.pmos_1 210 340
+p init mcand3[1] net_1[0] 2 10
+| end mux21x8.mux21
+| begin mux21x8.mux21_1 340 450
+| device mux21x8.mux21_1.nmos 210 150
+n init mcand3[1] net_1[1] 2 10
+| device mux21x8.mux21_1.pmos 210 150
+p mux21x8.net_5 mcand3[1] net_1[1] 2 10
+| device mux21x8.mux21_1.nmos_1 210 340
+n mux21x8.net_5 mcand3[2] net_1[1] 2 10
+| device mux21x8.mux21_1.pmos_1 210 340
+p init mcand3[2] net_1[1] 2 10
+| end mux21x8.mux21_1
+| begin mux21x8.mux21_2 340 550
+| device mux21x8.mux21_2.nmos 210 150
+n init mcand3[2] net_1[2] 2 10
+| device mux21x8.mux21_2.pmos 210 150
+p mux21x8.net_7 mcand3[2] net_1[2] 2 10
+| device mux21x8.mux21_2.nmos_1 210 340
+n mux21x8.net_7 mcand3[3] net_1[2] 2 10
+| device mux21x8.mux21_2.pmos_1 210 340
+p init mcand3[3] net_1[2] 2 10
+| end mux21x8.mux21_2
+| begin mux21x8.mux21_3 340 650
+| device mux21x8.mux21_3.nmos 210 150
+n init mcand3[3] net_1[3] 2 10
+| device mux21x8.mux21_3.pmos 210 150
+p mux21x8.net_1 mcand3[3] net_1[3] 2 10
+| device mux21x8.mux21_3.nmos_1 210 340
+n mux21x8.net_1 mcand5[0] net_1[3] 2 10
+| device mux21x8.mux21_3.pmos_1 210 340
+p init mcand5[0] net_1[3] 2 10
+| end mux21x8.mux21_3
+| begin mux21x8.inv 140 330
+| device mux21x8.inv.p0 400 220
+p init Vdd mux21x8.net_2 2 20
+| device mux21x8.inv.n0 400 380
+n init Gnd mux21x8.net_2 2 10
+| end mux21x8.inv
+| begin mux21x8.inv_1 140 430
+| device mux21x8.inv_1.p0 400 220
+p init Vdd mux21x8.net_5 2 20
+| device mux21x8.inv_1.n0 400 380
+n init Gnd mux21x8.net_5 2 10
+| end mux21x8.inv_1
+| begin mux21x8.inv_2 140 530
+| device mux21x8.inv_2.p0 400 220
+p init Vdd mux21x8.net_7 2 20
+| device mux21x8.inv_2.n0 400 380
+n init Gnd mux21x8.net_7 2 10
+| end mux21x8.inv_2
+| begin mux21x8.inv_3 140 630
+| device mux21x8.inv_3.p0 400 220
+p init Vdd mux21x8.net_1 2 20
+| device mux21x8.inv_3.n0 400 380
+n init Gnd mux21x8.net_1 2 10
+| end mux21x8.inv_3
+| begin mux21x8.mux21_4 340 750
+| device mux21x8.mux21_4.nmos 210 150
+n init gnd net_1[4] 2 10
+| device mux21x8.mux21_4.pmos 210 150
+p mux21x8.net_3 gnd net_1[4] 2 10
+| device mux21x8.mux21_4.nmos_1 210 340
+n mux21x8.net_3 mcand5[1] net_1[4] 2 10
+| device mux21x8.mux21_4.pmos_1 210 340
+p init mcand5[1] net_1[4] 2 10
+| end mux21x8.mux21_4
+| begin mux21x8.mux21_5 340 850
+| device mux21x8.mux21_5.nmos 210 150
+n init gnd net_1[5] 2 10
+| device mux21x8.mux21_5.pmos 210 150
+p mux21x8.net_6 gnd net_1[5] 2 10
+| device mux21x8.mux21_5.nmos_1 210 340
+n mux21x8.net_6 mcand5[2] net_1[5] 2 10
+| device mux21x8.mux21_5.pmos_1 210 340
+p init mcand5[2] net_1[5] 2 10
+| end mux21x8.mux21_5
+| begin mux21x8.mux21_6 340 950
+| device mux21x8.mux21_6.nmos 210 150
+n init gnd net_1[6] 2 10
+| device mux21x8.mux21_6.pmos 210 150
+p mux21x8.net_8 gnd net_1[6] 2 10
+| device mux21x8.mux21_6.nmos_1 210 340
+n mux21x8.net_8 mcand5[3] net_1[6] 2 10
+| device mux21x8.mux21_6.pmos_1 210 340
+p init mcand5[3] net_1[6] 2 10
+| end mux21x8.mux21_6
+| begin mux21x8.mux21_7 340 1050
+| device mux21x8.mux21_7.nmos 210 150
+n init gnd net_1[7] 2 10
+| device mux21x8.mux21_7.pmos 210 150
+p mux21x8.net_4 gnd net_1[7] 2 10
+| device mux21x8.mux21_7.nmos_1 210 340
+n mux21x8.net_4 cout net_1[7] 2 10
+| device mux21x8.mux21_7.pmos_1 210 340
+p init cout net_1[7] 2 10
+| end mux21x8.mux21_7
+| begin mux21x8.inv_4 140 730
+| device mux21x8.inv_4.p0 400 220
+p init Vdd mux21x8.net_3 2 20
+| device mux21x8.inv_4.n0 400 380
+n init Gnd mux21x8.net_3 2 10
+| end mux21x8.inv_4
+| begin mux21x8.inv_5 140 830
+| device mux21x8.inv_5.p0 400 220
+p init Vdd mux21x8.net_6 2 20
+| device mux21x8.inv_5.n0 400 380
+n init Gnd mux21x8.net_6 2 10
+| end mux21x8.inv_5
+| begin mux21x8.inv_6 140 930
+| device mux21x8.inv_6.p0 400 220
+p init Vdd mux21x8.net_8 2 20
+| device mux21x8.inv_6.n0 400 380
+n init Gnd mux21x8.net_8 2 10
+| end mux21x8.inv_6
+| begin mux21x8.inv_7 140 1030
+| device mux21x8.inv_7.p0 400 220
+p init Vdd mux21x8.net_4 2 20
+| device mux21x8.inv_7.n0 400 380
+n init Gnd mux21x8.net_4 2 10
+| end mux21x8.inv_7
+| end mux21x8
+| begin reg8 910 810
+| begin reg8.dffpos 340 690
+| device reg8.dffpos.nmos 420 160
+n reg8.dffpos.net_1 gnd reg8.dffpos.net_10 2 10
+| device reg8.dffpos.nmos_1 420 80
+n reg8.net_1 reg8.dffpos.net_10 reg8.dffpos.net_4 2 10
+| device reg8.dffpos.nmos_2 890 530
+n reg8.dffpos.net_1 gnd reg8.dffpos.net_5 2 10
+| device reg8.dffpos.nmos_3 890 450
+n reg8.net_1 reg8.dffpos.net_5 reg8.dffpos.net_3 2 10
+| device reg8.dffpos.pmos 890 350
+p reg8.dffpos.Clk_b reg8.dffpos.net_9 reg8.dffpos.net_3 2 20
+| device reg8.dffpos.pmos_1 890 270
+p reg8.dffpos.net_1 vdd reg8.dffpos.net_9 2 20
+| device reg8.dffpos.nmos_4 250 530
+n net_1[3] gnd reg8.dffpos.net_2 2 10
+| device reg8.dffpos.nmos_5 250 450
+n reg8.dffpos.Clk_b reg8.dffpos.net_2 reg8.dffpos.net_4 2 10
+| device reg8.dffpos.pmos_2 250 350
+p reg8.net_1 reg8.dffpos.net_8 reg8.dffpos.net_4 2 20
+| device reg8.dffpos.pmos_3 250 270
+p net_1[3] vdd reg8.dffpos.net_8 2 20
+| device reg8.dffpos.nmos_6 1100 160
+n q[3] gnd reg8.dffpos.net_11 2 10
+| device reg8.dffpos.nmos_7 1100 80
+n reg8.dffpos.Clk_b reg8.dffpos.net_11 reg8.dffpos.net_3 2 10
+| device reg8.dffpos.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos.net_7 reg8.dffpos.net_3 2 20
+| device reg8.dffpos.pmos_5 1100 -100
+p q[3] vdd reg8.dffpos.net_7 2 20
+| device reg8.dffpos.pmos_6 420 -100
+p reg8.dffpos.net_1 vdd reg8.dffpos.net_6 2 20
+| device reg8.dffpos.pmos_7 420 -20
+p reg8.dffpos.Clk_b reg8.dffpos.net_6 reg8.dffpos.net_4 2 20
+| device reg8.dffpos.nmos_8 510 440
+n reg8.dffpos.net_4 gnd reg8.dffpos.net_1 2 10
+| device reg8.dffpos.pmos_8 510 360
+p reg8.dffpos.net_4 vdd reg8.dffpos.net_1 2 20
+| device reg8.dffpos.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos.Clk_b 2 20
+| device reg8.dffpos.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos.Clk_b 2 40
+| device reg8.dffpos.nmos_10 1190 440
+n reg8.dffpos.net_3 gnd q[3] 2 20
+| device reg8.dffpos.pmos_10 1190 360
+p reg8.dffpos.net_3 vdd q[3] 2 40
+| end reg8.dffpos
+| begin reg8.dffpos_1 340 590
+| device reg8.dffpos_1.nmos 420 160
+n reg8.dffpos_1.net_1 gnd reg8.dffpos_1.net_10 2 10
+| device reg8.dffpos_1.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_1.net_10 reg8.dffpos_1.net_4 2 10
+| device reg8.dffpos_1.nmos_2 890 530
+n reg8.dffpos_1.net_1 gnd reg8.dffpos_1.net_5 2 10
+| device reg8.dffpos_1.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_1.net_5 reg8.dffpos_1.net_3 2 10
+| device reg8.dffpos_1.pmos 890 350
+p reg8.dffpos_1.Clk_b reg8.dffpos_1.net_9 reg8.dffpos_1.net_3 2 20
+| device reg8.dffpos_1.pmos_1 890 270
+p reg8.dffpos_1.net_1 vdd reg8.dffpos_1.net_9 2 20
+| device reg8.dffpos_1.nmos_4 250 530
+n net_1[2] gnd reg8.dffpos_1.net_2 2 10
+| device reg8.dffpos_1.nmos_5 250 450
+n reg8.dffpos_1.Clk_b reg8.dffpos_1.net_2 reg8.dffpos_1.net_4 2 10
+| device reg8.dffpos_1.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_1.net_8 reg8.dffpos_1.net_4 2 20
+| device reg8.dffpos_1.pmos_3 250 270
+p net_1[2] vdd reg8.dffpos_1.net_8 2 20
+| device reg8.dffpos_1.nmos_6 1100 160
+n q[2] gnd reg8.dffpos_1.net_11 2 10
+| device reg8.dffpos_1.nmos_7 1100 80
+n reg8.dffpos_1.Clk_b reg8.dffpos_1.net_11 reg8.dffpos_1.net_3 2 10
+| device reg8.dffpos_1.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_1.net_7 reg8.dffpos_1.net_3 2 20
+| device reg8.dffpos_1.pmos_5 1100 -100
+p q[2] vdd reg8.dffpos_1.net_7 2 20
+| device reg8.dffpos_1.pmos_6 420 -100
+p reg8.dffpos_1.net_1 vdd reg8.dffpos_1.net_6 2 20
+| device reg8.dffpos_1.pmos_7 420 -20
+p reg8.dffpos_1.Clk_b reg8.dffpos_1.net_6 reg8.dffpos_1.net_4 2 20
+| device reg8.dffpos_1.nmos_8 510 440
+n reg8.dffpos_1.net_4 gnd reg8.dffpos_1.net_1 2 10
+| device reg8.dffpos_1.pmos_8 510 360
+p reg8.dffpos_1.net_4 vdd reg8.dffpos_1.net_1 2 20
+| device reg8.dffpos_1.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_1.Clk_b 2 20
+| device reg8.dffpos_1.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_1.Clk_b 2 40
+| device reg8.dffpos_1.nmos_10 1190 440
+n reg8.dffpos_1.net_3 gnd q[2] 2 20
+| device reg8.dffpos_1.pmos_10 1190 360
+p reg8.dffpos_1.net_3 vdd q[2] 2 40
+| end reg8.dffpos_1
+| begin reg8.dffpos_2 340 490
+| device reg8.dffpos_2.nmos 420 160
+n reg8.dffpos_2.net_1 gnd reg8.dffpos_2.net_10 2 10
+| device reg8.dffpos_2.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_2.net_10 reg8.dffpos_2.net_4 2 10
+| device reg8.dffpos_2.nmos_2 890 530
+n reg8.dffpos_2.net_1 gnd reg8.dffpos_2.net_5 2 10
+| device reg8.dffpos_2.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_2.net_5 reg8.dffpos_2.net_3 2 10
+| device reg8.dffpos_2.pmos 890 350
+p reg8.dffpos_2.Clk_b reg8.dffpos_2.net_9 reg8.dffpos_2.net_3 2 20
+| device reg8.dffpos_2.pmos_1 890 270
+p reg8.dffpos_2.net_1 vdd reg8.dffpos_2.net_9 2 20
+| device reg8.dffpos_2.nmos_4 250 530
+n net_1[1] gnd reg8.dffpos_2.net_2 2 10
+| device reg8.dffpos_2.nmos_5 250 450
+n reg8.dffpos_2.Clk_b reg8.dffpos_2.net_2 reg8.dffpos_2.net_4 2 10
+| device reg8.dffpos_2.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_2.net_8 reg8.dffpos_2.net_4 2 20
+| device reg8.dffpos_2.pmos_3 250 270
+p net_1[1] vdd reg8.dffpos_2.net_8 2 20
+| device reg8.dffpos_2.nmos_6 1100 160
+n q[1] gnd reg8.dffpos_2.net_11 2 10
+| device reg8.dffpos_2.nmos_7 1100 80
+n reg8.dffpos_2.Clk_b reg8.dffpos_2.net_11 reg8.dffpos_2.net_3 2 10
+| device reg8.dffpos_2.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_2.net_7 reg8.dffpos_2.net_3 2 20
+| device reg8.dffpos_2.pmos_5 1100 -100
+p q[1] vdd reg8.dffpos_2.net_7 2 20
+| device reg8.dffpos_2.pmos_6 420 -100
+p reg8.dffpos_2.net_1 vdd reg8.dffpos_2.net_6 2 20
+| device reg8.dffpos_2.pmos_7 420 -20
+p reg8.dffpos_2.Clk_b reg8.dffpos_2.net_6 reg8.dffpos_2.net_4 2 20
+| device reg8.dffpos_2.nmos_8 510 440
+n reg8.dffpos_2.net_4 gnd reg8.dffpos_2.net_1 2 10
+| device reg8.dffpos_2.pmos_8 510 360
+p reg8.dffpos_2.net_4 vdd reg8.dffpos_2.net_1 2 20
+| device reg8.dffpos_2.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_2.Clk_b 2 20
+| device reg8.dffpos_2.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_2.Clk_b 2 40
+| device reg8.dffpos_2.nmos_10 1190 440
+n reg8.dffpos_2.net_3 gnd q[1] 2 20
+| device reg8.dffpos_2.pmos_10 1190 360
+p reg8.dffpos_2.net_3 vdd q[1] 2 40
+| end reg8.dffpos_2
+| begin reg8.dffpos_3 340 390
+| device reg8.dffpos_3.nmos 420 160
+n reg8.dffpos_3.net_1 gnd reg8.dffpos_3.net_10 2 10
+| device reg8.dffpos_3.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_3.net_10 reg8.dffpos_3.net_4 2 10
+| device reg8.dffpos_3.nmos_2 890 530
+n reg8.dffpos_3.net_1 gnd reg8.dffpos_3.net_5 2 10
+| device reg8.dffpos_3.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_3.net_5 reg8.dffpos_3.net_3 2 10
+| device reg8.dffpos_3.pmos 890 350
+p reg8.dffpos_3.Clk_b reg8.dffpos_3.net_9 reg8.dffpos_3.net_3 2 20
+| device reg8.dffpos_3.pmos_1 890 270
+p reg8.dffpos_3.net_1 vdd reg8.dffpos_3.net_9 2 20
+| device reg8.dffpos_3.nmos_4 250 530
+n net_1[0] gnd reg8.dffpos_3.net_2 2 10
+| device reg8.dffpos_3.nmos_5 250 450
+n reg8.dffpos_3.Clk_b reg8.dffpos_3.net_2 reg8.dffpos_3.net_4 2 10
+| device reg8.dffpos_3.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_3.net_8 reg8.dffpos_3.net_4 2 20
+| device reg8.dffpos_3.pmos_3 250 270
+p net_1[0] vdd reg8.dffpos_3.net_8 2 20
+| device reg8.dffpos_3.nmos_6 1100 160
+n q[0] gnd reg8.dffpos_3.net_11 2 10
+| device reg8.dffpos_3.nmos_7 1100 80
+n reg8.dffpos_3.Clk_b reg8.dffpos_3.net_11 reg8.dffpos_3.net_3 2 10
+| device reg8.dffpos_3.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_3.net_7 reg8.dffpos_3.net_3 2 20
+| device reg8.dffpos_3.pmos_5 1100 -100
+p q[0] vdd reg8.dffpos_3.net_7 2 20
+| device reg8.dffpos_3.pmos_6 420 -100
+p reg8.dffpos_3.net_1 vdd reg8.dffpos_3.net_6 2 20
+| device reg8.dffpos_3.pmos_7 420 -20
+p reg8.dffpos_3.Clk_b reg8.dffpos_3.net_6 reg8.dffpos_3.net_4 2 20
+| device reg8.dffpos_3.nmos_8 510 440
+n reg8.dffpos_3.net_4 gnd reg8.dffpos_3.net_1 2 10
+| device reg8.dffpos_3.pmos_8 510 360
+p reg8.dffpos_3.net_4 vdd reg8.dffpos_3.net_1 2 20
+| device reg8.dffpos_3.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_3.Clk_b 2 20
+| device reg8.dffpos_3.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_3.Clk_b 2 40
+| device reg8.dffpos_3.nmos_10 1190 440
+n reg8.dffpos_3.net_3 gnd q[0] 2 20
+| device reg8.dffpos_3.pmos_10 1190 360
+p reg8.dffpos_3.net_3 vdd q[0] 2 40
+| end reg8.dffpos_3
+| begin reg8.dffpos_4 340 1090
+| device reg8.dffpos_4.nmos 420 160
+n reg8.dffpos_4.net_1 gnd reg8.dffpos_4.net_10 2 10
+| device reg8.dffpos_4.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_4.net_10 reg8.dffpos_4.net_4 2 10
+| device reg8.dffpos_4.nmos_2 890 530
+n reg8.dffpos_4.net_1 gnd reg8.dffpos_4.net_5 2 10
+| device reg8.dffpos_4.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_4.net_5 reg8.dffpos_4.net_3 2 10
+| device reg8.dffpos_4.pmos 890 350
+p reg8.dffpos_4.Clk_b reg8.dffpos_4.net_9 reg8.dffpos_4.net_3 2 20
+| device reg8.dffpos_4.pmos_1 890 270
+p reg8.dffpos_4.net_1 vdd reg8.dffpos_4.net_9 2 20
+| device reg8.dffpos_4.nmos_4 250 530
+n net_1[7] gnd reg8.dffpos_4.net_2 2 10
+| device reg8.dffpos_4.nmos_5 250 450
+n reg8.dffpos_4.Clk_b reg8.dffpos_4.net_2 reg8.dffpos_4.net_4 2 10
+| device reg8.dffpos_4.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_4.net_8 reg8.dffpos_4.net_4 2 20
+| device reg8.dffpos_4.pmos_3 250 270
+p net_1[7] vdd reg8.dffpos_4.net_8 2 20
+| device reg8.dffpos_4.nmos_6 1100 160
+n q[7] gnd reg8.dffpos_4.net_11 2 10
+| device reg8.dffpos_4.nmos_7 1100 80
+n reg8.dffpos_4.Clk_b reg8.dffpos_4.net_11 reg8.dffpos_4.net_3 2 10
+| device reg8.dffpos_4.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_4.net_7 reg8.dffpos_4.net_3 2 20
+| device reg8.dffpos_4.pmos_5 1100 -100
+p q[7] vdd reg8.dffpos_4.net_7 2 20
+| device reg8.dffpos_4.pmos_6 420 -100
+p reg8.dffpos_4.net_1 vdd reg8.dffpos_4.net_6 2 20
+| device reg8.dffpos_4.pmos_7 420 -20
+p reg8.dffpos_4.Clk_b reg8.dffpos_4.net_6 reg8.dffpos_4.net_4 2 20
+| device reg8.dffpos_4.nmos_8 510 440
+n reg8.dffpos_4.net_4 gnd reg8.dffpos_4.net_1 2 10
+| device reg8.dffpos_4.pmos_8 510 360
+p reg8.dffpos_4.net_4 vdd reg8.dffpos_4.net_1 2 20
+| device reg8.dffpos_4.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_4.Clk_b 2 20
+| device reg8.dffpos_4.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_4.Clk_b 2 40
+| device reg8.dffpos_4.nmos_10 1190 440
+n reg8.dffpos_4.net_3 gnd q[7] 2 20
+| device reg8.dffpos_4.pmos_10 1190 360
+p reg8.dffpos_4.net_3 vdd q[7] 2 40
+| end reg8.dffpos_4
+| begin reg8.dffpos_5 340 990
+| device reg8.dffpos_5.nmos 420 160
+n reg8.dffpos_5.net_1 gnd reg8.dffpos_5.net_10 2 10
+| device reg8.dffpos_5.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_5.net_10 reg8.dffpos_5.net_4 2 10
+| device reg8.dffpos_5.nmos_2 890 530
+n reg8.dffpos_5.net_1 gnd reg8.dffpos_5.net_5 2 10
+| device reg8.dffpos_5.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_5.net_5 reg8.dffpos_5.net_3 2 10
+| device reg8.dffpos_5.pmos 890 350
+p reg8.dffpos_5.Clk_b reg8.dffpos_5.net_9 reg8.dffpos_5.net_3 2 20
+| device reg8.dffpos_5.pmos_1 890 270
+p reg8.dffpos_5.net_1 vdd reg8.dffpos_5.net_9 2 20
+| device reg8.dffpos_5.nmos_4 250 530
+n net_1[6] gnd reg8.dffpos_5.net_2 2 10
+| device reg8.dffpos_5.nmos_5 250 450
+n reg8.dffpos_5.Clk_b reg8.dffpos_5.net_2 reg8.dffpos_5.net_4 2 10
+| device reg8.dffpos_5.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_5.net_8 reg8.dffpos_5.net_4 2 20
+| device reg8.dffpos_5.pmos_3 250 270
+p net_1[6] vdd reg8.dffpos_5.net_8 2 20
+| device reg8.dffpos_5.nmos_6 1100 160
+n q[6] gnd reg8.dffpos_5.net_11 2 10
+| device reg8.dffpos_5.nmos_7 1100 80
+n reg8.dffpos_5.Clk_b reg8.dffpos_5.net_11 reg8.dffpos_5.net_3 2 10
+| device reg8.dffpos_5.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_5.net_7 reg8.dffpos_5.net_3 2 20
+| device reg8.dffpos_5.pmos_5 1100 -100
+p q[6] vdd reg8.dffpos_5.net_7 2 20
+| device reg8.dffpos_5.pmos_6 420 -100
+p reg8.dffpos_5.net_1 vdd reg8.dffpos_5.net_6 2 20
+| device reg8.dffpos_5.pmos_7 420 -20
+p reg8.dffpos_5.Clk_b reg8.dffpos_5.net_6 reg8.dffpos_5.net_4 2 20
+| device reg8.dffpos_5.nmos_8 510 440
+n reg8.dffpos_5.net_4 gnd reg8.dffpos_5.net_1 2 10
+| device reg8.dffpos_5.pmos_8 510 360
+p reg8.dffpos_5.net_4 vdd reg8.dffpos_5.net_1 2 20
+| device reg8.dffpos_5.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_5.Clk_b 2 20
+| device reg8.dffpos_5.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_5.Clk_b 2 40
+| device reg8.dffpos_5.nmos_10 1190 440
+n reg8.dffpos_5.net_3 gnd q[6] 2 20
+| device reg8.dffpos_5.pmos_10 1190 360
+p reg8.dffpos_5.net_3 vdd q[6] 2 40
+| end reg8.dffpos_5
+| begin reg8.dffpos_6 340 890
+| device reg8.dffpos_6.nmos 420 160
+n reg8.dffpos_6.net_1 gnd reg8.dffpos_6.net_10 2 10
+| device reg8.dffpos_6.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_6.net_10 reg8.dffpos_6.net_4 2 10
+| device reg8.dffpos_6.nmos_2 890 530
+n reg8.dffpos_6.net_1 gnd reg8.dffpos_6.net_5 2 10
+| device reg8.dffpos_6.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_6.net_5 reg8.dffpos_6.net_3 2 10
+| device reg8.dffpos_6.pmos 890 350
+p reg8.dffpos_6.Clk_b reg8.dffpos_6.net_9 reg8.dffpos_6.net_3 2 20
+| device reg8.dffpos_6.pmos_1 890 270
+p reg8.dffpos_6.net_1 vdd reg8.dffpos_6.net_9 2 20
+| device reg8.dffpos_6.nmos_4 250 530
+n net_1[5] gnd reg8.dffpos_6.net_2 2 10
+| device reg8.dffpos_6.nmos_5 250 450
+n reg8.dffpos_6.Clk_b reg8.dffpos_6.net_2 reg8.dffpos_6.net_4 2 10
+| device reg8.dffpos_6.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_6.net_8 reg8.dffpos_6.net_4 2 20
+| device reg8.dffpos_6.pmos_3 250 270
+p net_1[5] vdd reg8.dffpos_6.net_8 2 20
+| device reg8.dffpos_6.nmos_6 1100 160
+n q[5] gnd reg8.dffpos_6.net_11 2 10
+| device reg8.dffpos_6.nmos_7 1100 80
+n reg8.dffpos_6.Clk_b reg8.dffpos_6.net_11 reg8.dffpos_6.net_3 2 10
+| device reg8.dffpos_6.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_6.net_7 reg8.dffpos_6.net_3 2 20
+| device reg8.dffpos_6.pmos_5 1100 -100
+p q[5] vdd reg8.dffpos_6.net_7 2 20
+| device reg8.dffpos_6.pmos_6 420 -100
+p reg8.dffpos_6.net_1 vdd reg8.dffpos_6.net_6 2 20
+| device reg8.dffpos_6.pmos_7 420 -20
+p reg8.dffpos_6.Clk_b reg8.dffpos_6.net_6 reg8.dffpos_6.net_4 2 20
+| device reg8.dffpos_6.nmos_8 510 440
+n reg8.dffpos_6.net_4 gnd reg8.dffpos_6.net_1 2 10
+| device reg8.dffpos_6.pmos_8 510 360
+p reg8.dffpos_6.net_4 vdd reg8.dffpos_6.net_1 2 20
+| device reg8.dffpos_6.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_6.Clk_b 2 20
+| device reg8.dffpos_6.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_6.Clk_b 2 40
+| device reg8.dffpos_6.nmos_10 1190 440
+n reg8.dffpos_6.net_3 gnd q[5] 2 20
+| device reg8.dffpos_6.pmos_10 1190 360
+p reg8.dffpos_6.net_3 vdd q[5] 2 40
+| end reg8.dffpos_6
+| begin reg8.dffpos_7 340 790
+| device reg8.dffpos_7.nmos 420 160
+n reg8.dffpos_7.net_1 gnd reg8.dffpos_7.net_10 2 10
+| device reg8.dffpos_7.nmos_1 420 80
+n reg8.net_1 reg8.dffpos_7.net_10 reg8.dffpos_7.net_4 2 10
+| device reg8.dffpos_7.nmos_2 890 530
+n reg8.dffpos_7.net_1 gnd reg8.dffpos_7.net_5 2 10
+| device reg8.dffpos_7.nmos_3 890 450
+n reg8.net_1 reg8.dffpos_7.net_5 reg8.dffpos_7.net_3 2 10
+| device reg8.dffpos_7.pmos 890 350
+p reg8.dffpos_7.Clk_b reg8.dffpos_7.net_9 reg8.dffpos_7.net_3 2 20
+| device reg8.dffpos_7.pmos_1 890 270
+p reg8.dffpos_7.net_1 vdd reg8.dffpos_7.net_9 2 20
+| device reg8.dffpos_7.nmos_4 250 530
+n net_1[4] gnd reg8.dffpos_7.net_2 2 10
+| device reg8.dffpos_7.nmos_5 250 450
+n reg8.dffpos_7.Clk_b reg8.dffpos_7.net_2 reg8.dffpos_7.net_4 2 10
+| device reg8.dffpos_7.pmos_2 250 350
+p reg8.net_1 reg8.dffpos_7.net_8 reg8.dffpos_7.net_4 2 20
+| device reg8.dffpos_7.pmos_3 250 270
+p net_1[4] vdd reg8.dffpos_7.net_8 2 20
+| device reg8.dffpos_7.nmos_6 1100 160
+n q[4] gnd reg8.dffpos_7.net_11 2 10
+| device reg8.dffpos_7.nmos_7 1100 80
+n reg8.dffpos_7.Clk_b reg8.dffpos_7.net_11 reg8.dffpos_7.net_3 2 10
+| device reg8.dffpos_7.pmos_4 1100 -20
+p reg8.net_1 reg8.dffpos_7.net_7 reg8.dffpos_7.net_3 2 20
+| device reg8.dffpos_7.pmos_5 1100 -100
+p q[4] vdd reg8.dffpos_7.net_7 2 20
+| device reg8.dffpos_7.pmos_6 420 -100
+p reg8.dffpos_7.net_1 vdd reg8.dffpos_7.net_6 2 20
+| device reg8.dffpos_7.pmos_7 420 -20
+p reg8.dffpos_7.Clk_b reg8.dffpos_7.net_6 reg8.dffpos_7.net_4 2 20
+| device reg8.dffpos_7.nmos_8 510 440
+n reg8.dffpos_7.net_4 gnd reg8.dffpos_7.net_1 2 10
+| device reg8.dffpos_7.pmos_8 510 360
+p reg8.dffpos_7.net_4 vdd reg8.dffpos_7.net_1 2 20
+| device reg8.dffpos_7.nmos_9 160 40
+n reg8.net_1 gnd reg8.dffpos_7.Clk_b 2 20
+| device reg8.dffpos_7.pmos_9 160 -60
+p reg8.net_1 vdd reg8.dffpos_7.Clk_b 2 40
+| device reg8.dffpos_7.nmos_10 1190 440
+n reg8.dffpos_7.net_3 gnd q[4] 2 20
+| device reg8.dffpos_7.pmos_10 1190 360
+p reg8.dffpos_7.net_3 vdd q[4] 2 40
+| end reg8.dffpos_7
+| begin reg8.and 10 310
+| begin reg8.and.nand 380 300
+| device reg8.and.nand.nmos 410 570
+n clk gnd reg8.and.nand.net_1 2 20
+| device reg8.and.nand.nmos_1 410 490
+n en reg8.and.nand.net_1 reg8.and.net_1 2 20
+| device reg8.and.nand.pmos 410 380
+p clk vdd reg8.and.net_1 2 20
+| device reg8.and.nand.pmos_1 590 380
+p en vdd reg8.and.net_1 2 20
+| end reg8.and.nand
+| begin reg8.and.inv 460 290
+| device reg8.and.inv.p0 400 220
+p reg8.and.net_1 Vdd reg8.net_1 2 20
+| device reg8.and.inv.n0 400 380
+n reg8.and.net_1 Gnd reg8.net_1 2 10
+| end reg8.and.inv
+| end reg8.and
+| end reg8
